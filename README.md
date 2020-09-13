@@ -1,5 +1,6 @@
 # tdt4250
 Advanced Software Design
+#### Sebastian Westgaard Torgersen
 
 # Directory
 
