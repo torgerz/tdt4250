@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<stpl:StudyPlan
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:stpl="platform:/tdt4250.adsoftdesign/model/stpl.ecore"
+    xsi:schemaLocation="platform:/tdt4250.adsoftdesign/model/stpl.ecore stpl.ecore">
+  <directions
+      direction="MSIT"
+      subspecialization="//@directions.1">
+    <studySpecializations
+        year="2019">
+      <semesters
+          year="2020"
+          teachingSemester="Autumn"
+          electives="//@courses.0"/>
+      <semesters
+          year="2021"
+          teachingSemester="Spring"
+          electives="//@courses.2"
+          mandatories="//@courses.1"/>
+      <semesters
+          year="2019"
+          teachingSemester="Autumn"
+          electives="//@courses.0 //@courses.1"
+          mandatories="//@courses.2"/>
+    </studySpecializations>
+  </directions>
+  <directions
+      direction="Software"/>
+  <courses code="TDT4250"
+      name="Advanced Software Design"
+      credits="7.5"/>
+  <courses code="TDT4240"
+      name="Software Architecture"
+      credits="7.5"/>
+  <courses code="TDT4242"
+      name="Advanced Software Engineering"
+      credits="7.5"/>
+</stpl:StudyPlan>

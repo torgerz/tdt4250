@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/tdt4250.adsoftdesign/src" modelPluginID="tdt4250.adsoftdesign"
+    modelName="Stpl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>stpl.ecore</foreignModel>
+  <genPackages prefix="Stpl" basePackage="tdt4250" disposableProviderFactory="true"
+      ecorePackage="stpl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="stpl.ecore#//Credit">
+      <genEnumLiterals ecoreEnumLiteral="stpl.ecore#//Credit/FIVEPOINTS"/>
+      <genEnumLiterals ecoreEnumLiteral="stpl.ecore#//Credit/SEVENHALFPOINTS"/>
+      <genEnumLiterals ecoreEnumLiteral="stpl.ecore#//Credit/TENPOINTS"/>
+      <genEnumLiterals ecoreEnumLiteral="stpl.ecore#//Credit/FIFTEENPOINTS"/>
+      <genEnumLiterals ecoreEnumLiteral="stpl.ecore#//Credit/TWENTYPOINTS"/>
+      <genEnumLiterals ecoreEnumLiteral="stpl.ecore#//Credit/THIRTYPOINTS"/>
+    </genEnums>
+    <genClasses ecoreClass="stpl.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//Course/code"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//Course/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//Course/credits"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//Course/course"/>
+    </genClasses>
+    <genClasses ecoreClass="stpl.ecore#//Semester">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//Semester/year"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//Semester/teachingSemester"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stpl.ecore#//Semester/electives"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stpl.ecore#//Semester/mandatories"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference stpl.ecore#//Semester/studySpecialization"/>
+    </genClasses>
+    <genClasses ecoreClass="stpl.ecore#//StartOfStudy">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//StartOfStudy/year"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stpl.ecore#//StartOfStudy/semesters"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference stpl.ecore#//StartOfStudy/program"/>
+    </genClasses>
+    <genClasses ecoreClass="stpl.ecore#//Specialization">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute stpl.ecore#//Specialization/direction"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stpl.ecore#//Specialization/studySpecializations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference stpl.ecore#//Specialization/subspecialization"/>
+    </genClasses>
+    <genClasses ecoreClass="stpl.ecore#//StudyPlan">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stpl.ecore#//StudyPlan/directions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference stpl.ecore#//StudyPlan/courses"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

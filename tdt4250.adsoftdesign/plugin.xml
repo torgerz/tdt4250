@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated stpl -->
+      <package
+            uri="platform:/tdt4250.adsoftdesign/model/stpl.ecore"
+            class="tdt4250.stpl.StplPackage"
+            genModel="model/stpl.genmodel"/>
+   </extension>
+
+</plugin>
