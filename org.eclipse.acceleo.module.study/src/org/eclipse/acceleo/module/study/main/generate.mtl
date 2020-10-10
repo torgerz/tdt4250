@@ -1,0 +1,116 @@
+[comment encoding = UTF-8 /]
+[module generate('platform:/tdt4250.adsoftdesign/model/stpl.ecore','http://www.eclipse.org/emf/2002/Ecore')]
+
+
+[template public generateElement(studyPlan : StudyPlan)]
+[comment @main/]
+[file ('StudyPlan.html', false, 'UTF-8')]
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Study Plan</title>
+</head>
+<script>
+	
+function checkSemester(index) {
+	return index % 2 == 0;
+}
+
+</script>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.table-header {
+	border: 1px solid #F7F7F7;
+  	background-color:#F7F7F7;
+	font-weight: bold;
+}
+
+tr:nth-child(even) {background-color: #F7F7FF}
+</style>
+<body>
+    <!--<div>
+
+      <select name="specialization" id="specialization">
+		[for (specialization : Specialization | studyPlan.directions)]
+        	<option value="[specialization.direction/]">[specialization.direction/]</option>
+		[/for]
+      </select>
+	
+    </div>
+    <div>
+    	<label for="yearOfStudy">Choose start year of study:</label>
+     	<select name="yearofstudy" id="yearofstudy">
+      	  <option value="2020">2020</option>
+      	</select>
+    </div>-->
+	[for (program : Specialization | studyPlan.directions)]
+    <div id="direction[program.direction/]"> 
+		<h2>[program.direction/]</h2>
+		[for (studySpecialization : StartOfStudy | program.studySpecializations)]
+			<h6>Started study in [studySpecialization.year/]</h6>
+			[for (semester : Semester | studySpecialization.semesters)]
+					<h4><u>[semester.teachingSemester/]</u></h4>
+					[for (mandatory : Course | semester.mandatories)]
+						[if (i = 1)]
+						<div id="mandatories">
+						<h6>Mandatory Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+						[/if]
+					[/for]
+					[for (mandatory : Course | semester.mandatories)]
+		              <tr>
+		                <td>[mandatory.code/]</td>
+						<td>[mandatory.name/]</td>
+		                <td>[mandatory.credits/]</td>
+		              </tr>
+					[/for]
+			        </table>
+					[for (elective : Course | semester.electives)]
+						[if (i = 1)]
+						<div id="electives">
+						<h6>Elective Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+						[/if]
+					[/for]
+					[for (elective : Course | semester.electives)]
+		              <tr>
+		                <td>[elective.code/]</td>
+						<td>[elective.name/]</td>
+		                <td>[elective.credits/]</td>
+		              </tr>
+					[/for]
+				    </table>
+			    </div>
+      		</div>
+			[/for]
+		[/for]
+    	</div>  
+	[/for]
+    </div>
+  </body>
+</html
+[/file]
+[/template]

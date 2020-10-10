@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Study Plan</title>
+</head>
+<script>
+	
+function checkSemester(index) {
+	return index % 2 == 0;
+}
+
+</script>
+<style>
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.table-header {
+	border: 1px solid #F7F7F7;
+  	background-color:#F7F7F7;
+	font-weight: bold;
+}
+
+tr:nth-child(even) {background-color: #F7F7FF}
+</style>
+<body>
+    <!--<div>
+
+      <select name="specialization" id="specialization">
+        	<option value="MSIT">MSIT</option>
+        	<option value="MTDT">MTDT</option>
+      </select>
+	
+    </div>
+    <div>
+    	<label for="yearOfStudy">Choose start year of study:</label>
+     	<select name="yearofstudy" id="yearofstudy">
+      	  <option value="2020">2020</option>
+      	</select>
+    </div>-->
+    <div id="directionMSIT"> 
+		<h2>MSIT</h2>
+			<h6>Started study in 2019</h6>
+					<h4><u>Autumn</u></h4>
+						<div id="mandatories">
+						<h6>Mandatory Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4250</td>
+						<td>Advanced Software Design</td>
+		                <td>7.5</td>
+		              </tr>
+		              <tr>
+		                <td>TDT4240</td>
+						<td>Software Architecture</td>
+		                <td>7.5</td>
+		              </tr>
+			        </table>
+						<div id="electives">
+						<h6>Elective Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4250</td>
+						<td>Advanced Software Design</td>
+		                <td>7.5</td>
+		              </tr>
+				    </table>
+			    </div>
+      		</div>
+					<h4><u>Spring</u></h4>
+						<div id="mandatories">
+						<h6>Mandatory Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4240</td>
+						<td>Software Architecture</td>
+		                <td>7.5</td>
+		              </tr>
+			        </table>
+						<div id="electives">
+						<h6>Elective Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4242</td>
+						<td>Advanced Software Engineering</td>
+		                <td>7.5</td>
+		              </tr>
+				    </table>
+			    </div>
+      		</div>
+					<h4><u>Autumn</u></h4>
+						<div id="mandatories">
+						<h6>Mandatory Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4242</td>
+						<td>Advanced Software Engineering</td>
+		                <td>7.5</td>
+		              </tr>
+			        </table>
+						<div id="electives">
+						<h6>Elective Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4250</td>
+						<td>Advanced Software Design</td>
+		                <td>7.5</td>
+		              </tr>
+		              <tr>
+		                <td>TDT4240</td>
+						<td>Software Architecture</td>
+		                <td>7.5</td>
+		              </tr>
+				    </table>
+			    </div>
+      		</div>
+    	</div>  
+    <div id="directionMTDT"> 
+		<h2>MTDT</h2>
+			<h6>Started study in 2019</h6>
+					<h4><u>Autumn</u></h4>
+						<div id="mandatories">
+						<h6>Mandatory Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4242</td>
+						<td>Advanced Software Engineering</td>
+		                <td>7.5</td>
+		              </tr>
+		              <tr>
+		                <td>TDT4290</td>
+						<td>Kundestyrt prosjekt</td>
+		                <td>15</td>
+		              </tr>
+			        </table>
+						<div id="electives">
+						<h6>Elective Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4250</td>
+						<td>Advanced Software Design</td>
+		                <td>7.5</td>
+		              </tr>
+				    </table>
+			    </div>
+      		</div>
+					<h4><u>Spring</u></h4>
+						<div id="mandatories">
+						<h6>Mandatory Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4175</td>
+						<td>Informasjonssystemer</td>
+		                <td>7.5</td>
+		              </tr>
+			        </table>
+						<div id="electives">
+						<h6>Elective Courses</h6>
+						<table>
+							<tr class="table-header">
+					        	<td>Code</td>
+					   			<td>Name</td>
+					        	<td>Credits</td>
+					        </tr>
+		              <tr>
+		                <td>TDT4237</td>
+						<td>Programvaresikkerhet</td>
+		                <td>7.5</td>
+		              </tr>
+				    </table>
+			    </div>
+      		</div>
+    	</div>  
+    </div>
+  </body>
+</html
